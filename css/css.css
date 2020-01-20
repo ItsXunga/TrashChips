@@ -288,6 +288,26 @@ main {
     color: #FFF;
 }
 
+#lvl3 {
+    display: block;
+    background-image: url("../assets/imgs/BG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    height: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: #FFF;
+
+    font-family: 'Montserrat Light', sans-serif;
+    font-weight: 400;
+
+    width: 100%;
+}
+
 #desc_1 {
     width: 10vw;
     text-align: center;
@@ -353,7 +373,7 @@ main {
     left: 45vw;
 }
 
-#character1start, #character2start, #character3start, #start_btn, #character1, #character2, #character3, #regras, #sair, #nextlvl, #home_1, #home_2, #tryagain {
+#character1start, #character2start, #character3start, #start_btn, #character1, #character2, #character3, #regras, #sair, #nextlvl, #home_1, #home_2, #tryagain, #yes, #no {
     cursor: pointer;
 }
 

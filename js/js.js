@@ -19,8 +19,10 @@ var character;
 var arrayTeclas = [];
 var hp;
 var barcoLR = false;
-
-
+var menu_music = new Audio("assets/music/menu.mp3");
+var music_1 = new Audio("assets/music/1.mp3");
+var music_2 = new Audio("assets/music/2.mp3");
+var music_3 = new Audio("assets/music/3.mp3");
 var reset;
 var reset_2;
 
@@ -28,12 +30,14 @@ var reset_2;
 window.onload = function () {
     organize();
     document.getElementById('regras').onclick = function () {
+        menu_music.play();
         show_regras();
     };
     document.getElementById('audio_on').onclick = function () {
         audio_play();
     };
     document.getElementById('start_btn').onclick = function () {
+        menu_music.play();
         choose_character();
     }
 };
@@ -137,7 +141,7 @@ function start_btn_character_2() {
     };
     document.getElementById('character3start').onclick = function () {
         lvl = 3;
-        start_btn_difficulty_2();
+        start_btn_difficulty_1();
     }
 }
 
@@ -179,6 +183,9 @@ function start_btn_difficulty_1() {
             openFullscreen();
             document.getElementById('fish').style.display = "none";
             document.getElementById('octupus').style.display = "none";
+            menu_music.pause();
+            menu_music.currentTime = 0;
+            music_1.play();
             break;
         case 2:
             document.getElementById('start_2').style.display = "none";
@@ -189,6 +196,9 @@ function start_btn_difficulty_1() {
             openFullscreen();
             document.getElementById('fish').style.display = "none";
             document.getElementById('octupus').style.display = "none";
+            menu_music.pause();
+            menu_music.currentTime = 0;
+            music_2.play();
             break;
         case 3:
             document.getElementById('start_2').style.display = "none";
@@ -199,6 +209,9 @@ function start_btn_difficulty_1() {
             openFullscreen();
             document.getElementById('fish').style.display = "none";
             document.getElementById('octupus').style.display = "none";
+            menu_music.pause();
+            menu_music.currentTime = 0;
+            music_3.play();
             break;
 
     }
@@ -215,6 +228,9 @@ function start_btn_difficulty_2() {
             openFullscreen();
             document.getElementById('turtle').style.display = "none";
             document.getElementById('octupus').style.display = "none";
+            menu_music.pause();
+            menu_music.currentTime = 0;
+            music_1.play();
             break;
         case 2:
             document.getElementById('start_2').style.display = "none";
@@ -225,6 +241,9 @@ function start_btn_difficulty_2() {
             openFullscreen();
             document.getElementById('turtle').style.display = "none";
             document.getElementById('octupus').style.display = "none";
+            menu_music.pause();
+            menu_music.currentTime = 0;
+            music_2.play();
             break;
         case 3:
             document.getElementById('start_2').style.display = "none";
@@ -235,6 +254,9 @@ function start_btn_difficulty_2() {
             openFullscreen();
             document.getElementById('turtle').style.display = "none";
             document.getElementById('octupus').style.display = "none";
+            menu_music.pause();
+            menu_music.currentTime = 0;
+            music_3.play();
             break;
 
     }
@@ -251,6 +273,9 @@ function start_btn_difficulty_3() {
             openFullscreen();
             document.getElementById('turtle').style.display = "none";
             document.getElementById('fish').style.display = "none";
+            menu_music.pause();
+            menu_music.currentTime = 0;
+            music_1.play();
             break;
         case 2:
             document.getElementById('start_2').style.display = "none";
@@ -261,6 +286,9 @@ function start_btn_difficulty_3() {
             openFullscreen();
             document.getElementById('turtle').style.display = "none";
             document.getElementById('fish').style.display = "none";
+            menu_music.pause();
+            menu_music.currentTime = 0;
+            music_2.play();
             break;
         case 3:
             document.getElementById('start_2').style.display = "none";
@@ -271,6 +299,9 @@ function start_btn_difficulty_3() {
             openFullscreen();
             document.getElementById('turtle').style.display = "none";
             document.getElementById('fish').style.display = "none";
+            menu_music.pause();
+            menu_music.currentTime = 0;
+            music_3.play();
             break;
 
     }
@@ -453,6 +484,8 @@ function game_start() {
                                     document.getElementById('hp').src = "assets/imgs/hp_" + hp + ".png";
                                 }
                                 if (hp == 0) {
+                                    music_1.pause();
+                                    music_1.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('hud').style.display = "none";
@@ -493,6 +526,8 @@ function game_start() {
                                     document.getElementById('score').innerText = count + "/10";
                                 }
                                 if (count == 10) {
+                                    music_1.pause();
+                                    music_1.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('hud').style.display = "none";
@@ -529,6 +564,8 @@ function game_start() {
                                     document.getElementById('hp').src = "assets/imgs/hp_" + hp + ".png";
                                 }
                                 if (hp == 0) {
+                                    music_2.pause();
+                                    music_2.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('surface').style.display = "none";
@@ -575,6 +612,8 @@ function game_start() {
                                     document.getElementById('score').innerText = count + "/10";
                                 }
                                 if (count == 10) {
+                                    music_2.pause();
+                                    music_2.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('hud').style.display = "none";
@@ -635,6 +674,8 @@ function game_start() {
                                     document.getElementById('hp').src = "assets/imgs/hp_" + hp + ".png";
                                 }
                                 if (hp == 0) {
+                                    music_2.pause();
+                                    music_2.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('surface').style.display = "none";
@@ -681,6 +722,8 @@ function game_start() {
                                     document.getElementById('hp').src = "assets/imgs/hp_" + hp + ".png";
                                 }
                                 if (hp == 0) {
+                                    music_3.pause();
+                                    music_3.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('surface').style.display = "none";
@@ -727,6 +770,8 @@ function game_start() {
                                     document.getElementById('score').innerText = count + "/15";
                                 }
                                 if (count == 15) {
+                                    music_3.pause();
+                                    music_3.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('hud').style.display = "none";
@@ -787,6 +832,8 @@ function game_start() {
                                     document.getElementById('hp').src = "assets/imgs/hp_" + hp + ".png";
                                 }
                                 if (hp == 0) {
+                                    music_3.pause();
+                                    music_3.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('surface').style.display = "none";
@@ -839,6 +886,8 @@ function game_start() {
                                     document.getElementById('hp').src = "assets/imgs/hp_" + hp + ".png";
                                 }
                                 if (hp == 0) {
+                                    music_1.pause();
+                                    music_1.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('hud').style.display = "none";
@@ -884,6 +933,8 @@ function game_start() {
                                     document.getElementById('score').innerText = count + "/10";
                                 }
                                 if (count == 10) {
+                                    music_1.pause();
+                                    music_1.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('hud').style.display = "none";
@@ -919,6 +970,8 @@ function game_start() {
                                     document.getElementById('hp').src = "assets/imgs/hp_" + hp + ".png";
                                 }
                                 if (hp == 0) {
+                                    music_2.pause();
+                                    music_2.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('surface').style.display = "none";
@@ -965,6 +1018,8 @@ function game_start() {
                                     document.getElementById('score').innerText = count + "/10";
                                 }
                                 if (count == 10) {
+                                    music_2.pause();
+                                    music_2.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('hud').style.display = "none";
@@ -989,15 +1044,18 @@ function game_start() {
                     }, 2000 / 60);
 
                     boat_1_timer = setInterval(function () {
-                        if (!barcoLR)
+                        if (!barcoLR) {
                             document.getElementById('boat_1').style.left = parseFloat(document.getElementById('boat_1').offsetLeft) + 2 + "px";
-                        else if (barcoLR)
+                        }
+                        else if (barcoLR) {
                             document.getElementById('boat_1').style.left = parseFloat(document.getElementById('boat_1').offsetLeft) - 2 + "px";
-
-                        if (document.getElementById('boat_1').offsetLeft >= window.innerWidth - document.getElementById('boat_1').offsetWidth)
+                        }
+                        if (document.getElementById('boat_1').offsetLeft >= window.innerWidth - document.getElementById('boat_1').offsetWidth) {
                             barcoLR = true;
-                        else if (document.getElementById('boat_1').offsetLeft <= 0)
+                        }
+                        else if (document.getElementById('boat_1').offsetLeft <= 0) {
                             barcoLR = false
+                        }
                     }, 1000 / 60);
 
                     garrafa_timer_1 = setInterval(function () {
@@ -1024,6 +1082,8 @@ function game_start() {
                                     document.getElementById('hp').src = "assets/imgs/hp_" + hp + ".png";
                                 }
                                 if (hp == 0) {
+                                    music_2.pause();
+                                    music_2.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('surface').style.display = "none";
@@ -1069,6 +1129,8 @@ function game_start() {
                                     document.getElementById('hp').src = "assets/imgs/hp_" + hp + ".png";
                                 }
                                 if (hp == 0) {
+                                    music_3.pause();
+                                    music_3.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('surface').style.display = "none";
@@ -1115,6 +1177,8 @@ function game_start() {
                                     document.getElementById('score').innerText = count + "/10";
                                 }
                                 if (count == 10) {
+                                    music_3.pause();
+                                    music_3.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('hud').style.display = "none";
@@ -1174,6 +1238,8 @@ function game_start() {
                                     document.getElementById('hp').src = "assets/imgs/hp_" + hp + ".png";
                                 }
                                 if (hp == 0) {
+                                    music_3.pause();
+                                    music_3.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('surface').style.display = "none";
@@ -1226,6 +1292,8 @@ function game_start() {
                                     document.getElementById('hp').src = "assets/imgs/hp_" + hp + ".png";
                                 }
                                 if (hp == 0) {
+                                    music_1.pause();
+                                    music_1.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('hud').style.display = "none";
@@ -1271,6 +1339,8 @@ function game_start() {
                                     document.getElementById('score').innerText = count + "/10";
                                 }
                                 if (count == 10) {
+                                    music_1.pause();
+                                    music_1.currentTime = 0;
                                     document.getElementById('hud').style.display = "none";
                                     document.getElementById('victory').style.display = "block";
                                     document.getElementById('nextlvl').style.display = "block";
@@ -1304,6 +1374,8 @@ function game_start() {
                                     document.getElementById('hp').src = "assets/imgs/hp_" + hp + ".png";
                                 }
                                 if (hp == 0) {
+                                    music_2.pause();
+                                    music_2.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('surface').style.display = "none";
@@ -1350,6 +1422,8 @@ function game_start() {
                                     document.getElementById('score').innerText = count + "/10";
                                 }
                                 if (count == 10) {
+                                    music_2.pause();
+                                    music_2.currentTime = 0;
                                     document.getElementById('hud').style.display = "none";
                                     document.getElementById('boat_1').style.display = "none";
                                     document.getElementById('victory').style.display = "block";
@@ -1407,6 +1481,8 @@ function game_start() {
                                     document.getElementById('hp').src = "assets/imgs/hp_" + hp + ".png";
                                 }
                                 if (hp == 0) {
+                                    music_2.pause();
+                                    music_2.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('surface').style.display = "none";
@@ -1454,6 +1530,8 @@ function game_start() {
                                     document.getElementById('hp').src = "assets/imgs/hp_" + hp + ".png";
                                 }
                                 if (hp == 0) {
+                                    music_3.pause();
+                                    music_3.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('surface').style.display = "none";
@@ -1500,6 +1578,8 @@ function game_start() {
                                     document.getElementById('score').innerText = count + "/10";
                                 }
                                 if (count == 10) {
+                                    music_3.pause();
+                                    music_3.currentTime = 0;
                                     document.getElementById('hud').style.display = "none";
                                     document.getElementById('boat_2').style.display = "none";
                                     document.getElementById('victory').style.display = "block";
@@ -1557,6 +1637,8 @@ function game_start() {
                                     document.getElementById('hp').src = "assets/imgs/hp_" + hp + ".png";
                                 }
                                 if (hp == 0) {
+                                    music_3.pause();
+                                    music_3.currentTime = 0;
                                     reset_var();
                                     stop_timers();
                                     document.getElementById('surface').style.display = "none";
@@ -1987,9 +2069,11 @@ function next_level() {
 }
 
 function audio_play() {
+    menu_music.pause();
     document.getElementById('audio_on').style.display = "none";
     document.getElementById('audio_off').style.display = "block";
     document.getElementById('audio_off').onclick = function () {
+        menu_music.play();
         document.getElementById('audio_on').style.display = "block";
         document.getElementById('audio_off').style.display = "none";
     };
@@ -2015,7 +2099,6 @@ function restart_timers() {
     document.getElementById('hud').innerHTML = reset_2;
     choose_character();
     reorganizar();
-
 }
 
 function reset_var() {
