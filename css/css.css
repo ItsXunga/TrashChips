@@ -202,7 +202,7 @@ main {
 #tryagain {
     position: absolute;
     z-index: 6;
-    opacity: 0%;
+    opacity: 0;
     height: 10vh;
     right: 22vw;
     width: 60vw;
@@ -212,7 +212,7 @@ main {
 #returntitle {
     position: absolute;
     z-index: 6;
-    opacity: 0%;
+    opacity: 0;
     height: 10vh;
     right: 22vw;
     width: 60vw;
