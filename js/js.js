@@ -1575,7 +1575,7 @@ function game_start() {
                             if (document.getElementById("food" + z).style.display == "block" && verificaColisao(document.getElementById("octupus"), 80, 80, document.getElementById("food" + z), 31, 31)) {
                                 if (count <= 9) {
                                     count++;
-                                    document.getElementById('score').innerText = count + "/10";
+                                    document.getElementById('score').innerText = count + "/15";
                                 }
                                 if (count == 10) {
                                     music_3.pause();
