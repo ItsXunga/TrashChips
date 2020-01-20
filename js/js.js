@@ -26,7 +26,7 @@ var music_3 = new Audio("assets/music/3.mp3");
 var reset;
 var reset_2;
 
-//Olá Profs, 20 por favor! Se der der erro a culpa não é minha, é do computador. O código está corretíssímo.
+//Olá Profs, 20 por favor! Se der der erro a culpa não é minha, é do computador. O código está corretíssímo. ¯\_(ツ)_/¯
 
 window.onload = function () {
     organize();
