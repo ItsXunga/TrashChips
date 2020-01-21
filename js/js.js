@@ -1334,7 +1334,7 @@ function game_start() {
 
                     food_timer = setInterval(function () {
                         for (z = 0; z < 21; z++) {
-                            if (document.getElementById("food" + z).style.display == "block" && verificaColisao(document.getElementById("fish"), 80, 80, document.getElementById("food" + z), 31, 31)) {
+                            if (document.getElementById("food" + z).style.display == "block" && verificaColisao(document.getElementById("octupus"), 80, 80, document.getElementById("food" + z), 31, 31)) {
                                 if (count <= 9) {
                                     count++;
                                     document.getElementById('score').innerText = count + "/10";
